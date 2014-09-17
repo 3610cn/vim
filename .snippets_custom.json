@@ -1,0 +1,9 @@
+{
+    "html": {
+        "abbreviations": {
+        },
+        "snippets": {
+            "ccci": "ISSUE=IGNORE\nPCHECK=IGNORE"
+        }
+    }
+}
