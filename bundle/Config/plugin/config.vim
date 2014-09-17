@@ -1,5 +1,6 @@
 " 色彩主题
-colo molokai
+"colo molokai
+colo desertEx
 if $TERM == "xterm-256color"
     set t_Co=256 " 256 色
 endif
@@ -15,6 +16,18 @@ set ruler
 " 编码设置
 set fileencodings=ucs-bom,utf-8,gbk
 set fileformats=unix,dos,mac
+
+"设置-为变量一部分
+set iskeyword+=-
+
+"设置行号
+set nu
+
+"ctags
+map [[ <c-t>
+map ]] <c-]>
+"taglist
+map <silent> <F9> :TagbarToggle<cr>
 
 " 缩进设置
 set smarttab
@@ -52,11 +65,33 @@ set incsearch
 " 永远显示状态栏
 set laststatus=2
 
+"NERDTree
+map nd :NERDTreeToggle<cr>
+
+" 平滑的滚屏 *scroll-smooth*
+map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
+" 打开javascript折叠
+let b:javascript_fold=1
+" 打开javascript对dom、html和css的支持
+let javascript_enable_domhtmlcss=1
+
+"当粘贴文本时, vim对自动进行格式化, 效果很不好, 这个命令使得在插入状态下用F3键就进入粘贴模式, 不会格式化
+set pastetoggle=<F4>
+
 " undo dir
 if v:version >= 703
   set undodir=$HOME/.vimundodir
   set undofile
 endif
+
+" jsbeautify
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " 打开文件时跳到上次编辑的位置
 autocmd BufReadPost * call handy#JumpToLatest()
