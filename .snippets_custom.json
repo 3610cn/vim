@@ -3,7 +3,9 @@
         "abbreviations": {
         },
         "snippets": {
-            "ccci": "ISSUE=IGNORE\nPCHECK=IGNORE"
+            "ccci": "ISSUE=IGNORE\nPCHECK=IGNORE",
+            "desc": "/**\n * @file |\n * @author maoquan(maoquan@baidu.com)\n */",
+            "cccm": "/**\n * |\n */"
         }
     }
 }

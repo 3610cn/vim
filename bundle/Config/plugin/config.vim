@@ -106,5 +106,8 @@ autocmd BufWritePre *.js call handy#RemoveTrailingWhitespace()
 " 写文件时去去找 jstags.sh 生成 tag
 autocmd BufWritePost *.js call handy#GenerateTag()
 
+" ctrlp
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*/*target/*,*/target*/*,*/node_modules/*
+set wildignore+=*/app/*,*/mu/*
+
