@@ -1,9 +1,10 @@
 " 色彩主题
-"colo molokai
-colo desertEx
 if $TERM == "xterm-256color"
     set t_Co=256 " 256 色
 endif
+
+set background=dark
+colors peaksea
 
 " 关闭兼容模式
 set nocompatible
@@ -110,4 +111,3 @@ autocmd BufWritePost *.js call handy#GenerateTag()
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*/*target/*,*/target*/*,*/node_modules/*
 set wildignore+=*/app/*,*/mu/*
-

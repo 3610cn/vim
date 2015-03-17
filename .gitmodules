@@ -88,3 +88,6 @@
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
 	url = https://github.com/spf13/vim-autoclose.git
+[submodule "bundle/colorv"]
+	path = bundle/colorv
+	url = https://github.com/Rykka/colorv.vim.git
