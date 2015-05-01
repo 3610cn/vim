@@ -3,8 +3,9 @@ if $TERM == "xterm-256color"
     set t_Co=256 " 256 色
 endif
 
+syntax enable
 set background=dark
-colors peaksea
+colorscheme solarized
 
 " 关闭兼容模式
 set nocompatible
