@@ -16,8 +16,11 @@ set backspace=indent,eol,start
 " 右下角显示标尺
 set ruler
 " 编码设置
-set fileencodings=ucs-bom,utf-8,gbk
-set fileformats=unix,dos,mac
+"set fileencodings=ucs-bom,utf-8,gbk
+"set fileformats=unix,dos,mac
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set termencoding=utf-8
+set encoding=prc
 
 "设置-为变量一部分
 set iskeyword+=-
