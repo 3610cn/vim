@@ -127,3 +127,5 @@ let g:syntastic_javascript_checkers = ['fecs']
 let g:syntastic_javascript_fecs_args = "--reporter=baidu"
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠""
+
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets_custom.json')), "\n"))
